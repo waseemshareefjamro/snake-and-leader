@@ -80,7 +80,6 @@ while (!flage)
 				srand(time(0));
 				r=(rand()%6)+1;
 			    rand_num1=r;
-				cout<<"player 1 =>"<<r<<endl;
 				dice2(rand_num1);
 //				cout<<"player 1 =>"<<r<<endl;
 			 	break;
@@ -148,8 +147,6 @@ while (!flage)
 				srand(time(0));
 				r1=(rand()%6)+1;
 				rand_num2=r1;
-		
-				cout<<"player 2 =>"<<r1<<endl;
 				dice2(rand_num2);
 			 	break;
 			case ALLEGRO_KEY_ESCAPE:
