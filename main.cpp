@@ -2,8 +2,6 @@
 #include <cstdlib>
 #include <time.h>
 #include <allegro5/allegro.h>
-#include <allegro5/allegro_native_dialog.h>
-#include <allegro5/allegro_primitives.h>
 #include <allegro5/allegro_image.h>
 #include <allegro5/allegro_audio.h>
 #include <allegro5/allegro_acodec.h>
@@ -45,13 +43,12 @@ int main ()
 
 	al_clear_to_color(al_map_rgb(0,0,0));
 	al_draw_bitmap(welcome,0,0,0);
-    al_flip_display();
-
-    al_rest(5);
+        al_flip_display();
+        al_rest(5);
 	al_clear_to_color(al_map_rgb(0,0,0));
 	al_draw_bitmap(background,100,0,0);
 	al_draw_bitmap(lucky,0,100,0);
-    al_flip_display();
+        al_flip_display();
 
 
    ALLEGRO_EVENT_QUEUE *queue=al_create_event_queue();
@@ -116,11 +113,11 @@ while (!flage)
 			//this block show display
 				al_clear_to_color(al_map_rgb(50,0,0));
 				al_draw_bitmap(lucky,0,100,0);
-		       	al_draw_bitmap(background,100,0,0);
-		       	dice (rand_num1);
-		       	al_draw_bitmap(player1,x,y,0);
+		       	        al_draw_bitmap(background,100,0,0);
+		       	        dice (rand_num1);
+		         	al_draw_bitmap(player1,x,y,0);
 				al_draw_bitmap(player2,x2,y2,0);
-		        al_flip_display();
+		                al_flip_display();
 				al_rest(0.2);
 				count +=1;
 				
@@ -129,10 +126,10 @@ while (!flage)
 	}
 		if(count==100)
 			{
-				al_clear_to_color(al_map_rgb(0,0,0));
-				al_draw_bitmap(winner,0,0,0);
+			al_clear_to_color(al_map_rgb(0,0,0));
+			al_draw_bitmap(winner,0,0,0);
 		        al_flip_display();
-                al_rest(10);
+                        al_rest(10);
 			}
 }
 //_______________________________________SECOND PLAYER MOVES ____________________________
@@ -198,17 +195,11 @@ while (!flage)
 			{
 				al_clear_to_color(al_map_rgb(0,0,0));
 				al_draw_bitmap(winner,0,0,0);
-		        al_flip_display();
-                al_rest(10);
+		        	al_flip_display();
+                		al_rest(10);
 			}
 	}
-
-
-
-
 //____________________________________________________________________________________________________________
-
-
 }
 
    al_destroy_display(display);
@@ -221,13 +212,9 @@ while (!flage)
   al_destroy_sample(sample);
    al_uninstall_keyboard();
 }
-
-
 /*_______________________________________
 MAIN COMPLETE
 *///_____________________________________
-
-
 int leader_P(int *r,int count)
 {
 
@@ -329,47 +316,41 @@ int snake_P(int *r,int *count,int *x, int *y)
 				}
 return *count , *r , *x , *y;
 }
-/*_______________________________________________
+/*_______________________..________________________
 DICE FOR FIRST PLAYER
 */
 
 void dice(int r )
 {
 	    al_init();
-		al_init_image_addon();
+	    al_init_image_addon();
 	switch(r)
 	{
 
 	case 1 :
 			{
-
 		        ALLEGRO_BITMAP *dice1=al_load_bitmap("dbl1.png");
 		        al_draw_bitmap(dice1,0,0,0);
 		        break;
-
 			}
 	case 2 :
 			{
-
-				ALLEGRO_BITMAP *dice2=al_load_bitmap("dbl2.png");
+			ALLEGRO_BITMAP *dice2=al_load_bitmap("dbl2.png");
 		        al_draw_bitmap(dice2,0,0,0);
 		        break;
 			}
 
 	case 3 :
 			{
-
 		        ALLEGRO_BITMAP *dice3=al_load_bitmap("dbl3.png");
 		        al_draw_bitmap(dice3,0,0,0);
 		        break;
-
 			}
 
 
 	case 4 :
 			{
-
-		 		ALLEGRO_BITMAP *dice4=al_load_bitmap("dbl4.png");
+		 	ALLEGRO_BITMAP *dice4=al_load_bitmap("dbl4.png");
 		        al_draw_bitmap(dice4,0,0,0);
 		        break;
 			}
@@ -405,50 +386,41 @@ void dice2(int r )
 
 	case 1 :
 			{
-
 		        ALLEGRO_BITMAP *dice1=al_load_bitmap("dgl1.png");
 		        al_draw_bitmap(dice1,0,0,0);
 		        break;
-
 			}
 	case 2 :
 			{
-
-				ALLEGRO_BITMAP *dice2=al_load_bitmap("dgl2.png");
+			ALLEGRO_BITMAP *dice2=al_load_bitmap("dgl2.png");
 		        al_draw_bitmap(dice2,0,0,0);
 		        break;
 			}
 
 	case 3 :
 			{
-
 		        ALLEGRO_BITMAP *dice3=al_load_bitmap("dgl3.png");
 		        al_draw_bitmap(dice3,0,0,0);
 		        break;
-
 			}
 
 
 	case 4 :
 			{
-
-		 		ALLEGRO_BITMAP *dice4=al_load_bitmap("dgl4.png");
+		 	ALLEGRO_BITMAP *dice4=al_load_bitmap("dgl4.png");
 		        al_draw_bitmap(dice4,0,0,0);
 		        break;
 			}
 
 	case 5 :
 			{
-
 	        	ALLEGRO_BITMAP *dice5=al_load_bitmap("dgl5.png");
 		        al_draw_bitmap(dice5,0,0,0);
 		        break;
-
 			}
 
 	default :
 			{
-
 		        ALLEGRO_BITMAP *dice6=al_load_bitmap("dgl6.png");
 		        al_draw_bitmap(dice6,0,0,0);
 		    	break;
