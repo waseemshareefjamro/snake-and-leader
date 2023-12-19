@@ -54,8 +54,6 @@ int main ()
    ALLEGRO_EVENT_QUEUE *queue=al_create_event_queue();
    ALLEGRO_KEYBOARD_STATE keystate;
    al_install_keyboard();
-
-
     int x=110, y=655, r=0 ,count=1 ,r1=0 ,count1=1 ,x2=110, y2=655,rand_num1,rand_num2;//defines coordinates of board 
 
     al_register_event_source(queue, al_get_keyboard_event_source());
@@ -130,6 +128,7 @@ while (!flage)
 			al_draw_bitmap(winner,0,0,0);
 		        al_flip_display();
                         al_rest(10);
+exit;
 			}
 }
 //_______________________________________SECOND PLAYER MOVES ____________________________
@@ -197,6 +196,7 @@ while (!flage)
 				al_draw_bitmap(winner,0,0,0);
 		        	al_flip_display();
                 		al_rest(10);
+ exit;
 			}
 	}
 //____________________________________________________________________________________________________________
